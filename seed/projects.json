@@ -1,0 +1,390 @@
+[
+  {
+    "name": "E-commerce Inventory API",
+    "description": "High-load REST API for managing warehouse inventory across multiple regions. Features asynchronous processing and real-time stock updates.",
+    "start_date": "2023-01-15",
+    "end_date": "2023-08-30",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.11"
+      },
+      {
+        "name": "FastAPI",
+        "version": "0.95.1"
+      },
+      {
+        "name": "PostgreSQL",
+        "version": "15.2"
+      },
+      {
+        "name": "Redis",
+        "version": "7.0"
+      }
+    ]
+  },
+  {
+    "name": "Data Warehouse ETL Pipeline",
+    "description": "Automated pipeline aggregating marketing data from Facebook Ads, Google Ads, and TikTok into Snowflake for BI analysis.",
+    "start_date": "2022-05-10",
+    "end_date": "2022-11-20",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.10"
+      },
+      {
+        "name": "Apache Airflow",
+        "version": "2.5.1"
+      },
+      {
+        "name": "dbt",
+        "version": "1.4.0"
+      },
+      {
+        "name": "Snowflake",
+        "version": "Enterprise"
+      }
+    ]
+  },
+  {
+    "name": "Marketplace Price Scraper",
+    "description": "Distributed scraping system for monitoring competitor prices on Amazon and eBay. Handles anti-bot protection and proxy rotation.",
+    "start_date": "2021-03-01",
+    "end_date": "2021-06-15",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.9"
+      },
+      {
+        "name": "Selenium",
+        "version": "4.1.0"
+      },
+      {
+        "name": "Celery",
+        "version": "5.2.0"
+      },
+      {
+        "name": "RabbitMQ",
+        "version": "3.8.0"
+      }
+    ]
+  },
+  {
+    "name": "Legacy CRM Migration",
+    "description": "Refactoring and migrating a monolithic legacy CRM system to a microservices architecture.",
+    "start_date": "2020-11-01",
+    "end_date": "2021-02-28",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "2.7"
+      },
+      {
+        "name": "Django",
+        "version": "1.11"
+      },
+      {
+        "name": "MySQL",
+        "version": "5.7"
+      }
+    ]
+  },
+  {
+    "name": "Real-time Chat Service",
+    "description": "Websocket-based chat microservice for a social platform, supporting 10k concurrent connections.",
+    "start_date": "2023-09-01",
+    "end_date": null,
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.11"
+      },
+      {
+        "name": "Uvicorn",
+        "version": "0.20.0"
+      },
+      {
+        "name": "WebSockets",
+        "version": "10.4"
+      }
+    ]
+  },
+  {
+    "name": "Crypto Trading Bot",
+    "description": "Algorithmic trading bot connected to Binance API. Implements RSI and MACD strategies for automated order execution.",
+    "start_date": "2022-01-10",
+    "end_date": "2022-04-20",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.10"
+      },
+      {
+        "name": "Pandas",
+        "version": "2.0.1"
+      },
+      {
+        "name": "NumPy",
+        "version": "1.24.3"
+      }
+    ]
+  },
+  {
+    "name": "Corporate Booking Portal",
+    "description": "Internal tool for booking meeting rooms and parking spots. Integrated with Google Calendar API.",
+    "start_date": "2021-07-01",
+    "end_date": "2021-12-20",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.9"
+      },
+      {
+        "name": "Flask",
+        "version": "2.2.3"
+      },
+      {
+        "name": "SQLAlchemy",
+        "version": "1.4"
+      },
+      {
+        "name": "Docker",
+        "version": "24.0"
+      }
+    ]
+  },
+  {
+    "name": "Log Aggregation System",
+    "description": "Centralized logging solution using ELK stack, processing 50GB of logs daily from various microservices.",
+    "start_date": "2022-08-01",
+    "end_date": "2022-10-30",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.10"
+      },
+      {
+        "name": "Elasticsearch",
+        "version": "7.17"
+      },
+      {
+        "name": "Kibana",
+        "version": "7.17"
+      },
+      {
+        "name": "ClickHouse",
+        "version": "1.21"
+      }
+    ]
+  },
+  {
+    "name": "Auth Service (OAuth2)",
+    "description": "Standalone authentication service implementing OAuth2 and JWT tokens for single sign-on (SSO).",
+    "start_date": "2023-02-15",
+    "end_date": "2023-04-15",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.11"
+      },
+      {
+        "name": "Pydantic",
+        "version": "1.7.4"
+      },
+      {
+        "name": "python-jose",
+        "version": "2.8.0"
+      }
+    ]
+  },
+  {
+    "name": "Portfolio API",
+    "description": "The backend for this very portfolio, demonstrating Clean Architecture and DDD principles.",
+    "start_date": "2025-12-16",
+    "end_date": null,
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.12"
+      },
+      {
+        "name": "Flask",
+        "version": "3.0.0"
+      },
+      {
+        "name": "SQLAlchemy",
+        "version": "2.0.23"
+      },
+      {
+        "name": "PostgreSQL",
+        "version": "16.1"
+      }
+    ]
+  },
+  {
+    "name": "AI Content Generator SaaS",
+    "description": "B2B platform for generating marketing copy using LLMs. Implements RAG (Retrieval-Augmented Generation) for brand-specific tone.",
+    "start_date": "2023-11-01",
+    "end_date": "2024-05-15",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.12"
+      },
+      {
+        "name": "LangChain",
+        "version": "0.1.0"
+      },
+      {
+        "name": "OpenAI API",
+        "version": "1.12.0"
+      },
+      {
+        "name": "Pinecone",
+        "version": "3.0.0"
+      },
+      {
+        "name": "FastAPI",
+        "version": "0.109.0"
+      }
+    ]
+  },
+  {
+    "name": "IoT Fleet Management",
+    "description": "Real-time tracking system for logistics vehicles. Processes telemetry data via MQTT and visualizes routes on a map.",
+    "start_date": "2022-06-01",
+    "end_date": "2023-01-20",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.10"
+      },
+      {
+        "name": "MQTT",
+        "version": "5.0"
+      },
+      {
+        "name": "TimescaleDB",
+        "version": "2.11"
+      },
+      {
+        "name": "GeoAlchemy2",
+        "version": "0.14.0"
+      },
+      {
+        "name": "aiohttp",
+        "version": "3.8.5"
+      }
+    ]
+  },
+  {
+    "name": "Video Transcoding Service",
+    "description": "Distributed system for converting uploaded videos into HLS/DASH formats for adaptive streaming. Uses a worker pool pattern.",
+    "start_date": "2021-09-10",
+    "end_date": "2022-03-01",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.9"
+      },
+      {
+        "name": "FFmpeg",
+        "version": "6.0"
+      },
+      {
+        "name": "Celery",
+        "version": "5.3.0"
+      },
+      {
+        "name": "Redis",
+        "version": "6.2"
+      },
+      {
+        "name": "Boto3",
+        "version": "1.28.0"
+      }
+    ]
+  },
+  {
+    "name": "Financial Fraud Detection",
+    "description": "Real-time transaction analysis engine using Machine Learning models to flag suspicious banking activities.",
+    "start_date": "2023-03-01",
+    "end_date": "2023-10-30",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.11"
+      },
+      {
+        "name": "Apache Kafka",
+        "version": "3.4.0"
+      },
+      {
+        "name": "Scikit-learn",
+        "version": "1.3.0"
+      },
+      {
+        "name": "Cassandra",
+        "version": "4.1"
+      }
+    ]
+  },
+  {
+    "name": "Telehealth Platform",
+    "description": "HIPAA-compliant backend for remote doctor consultations with secure video signaling and electronic health record (EHR) integration.",
+    "start_date": "2020-05-01",
+    "end_date": "2021-08-15",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.8"
+      },
+      {
+        "name": "Django",
+        "version": "3.2"
+      },
+      {
+        "name": "Django Channels",
+        "version": "3.0"
+      },
+      {
+        "name": "WebRTC",
+        "version": "1.0"
+      },
+      {
+        "name": "PostgreSQL",
+        "version": "13.4"
+      }
+    ]
+  },
+  {
+    "name": "HR Resume Parser",
+    "description": "Automation tool for recruitment agencies. Extracts skills, experience, and contacts from PDF resumes using NLP.",
+    "start_date": "2024-06-01",
+    "end_date": "2022-06-01",
+    "technologies": [
+      {
+        "name": "Python",
+        "version": "3.12"
+      },
+      {
+        "name": "Spacy",
+        "version": "3.7.0"
+      },
+      {
+        "name": "Elasticsearch",
+        "version": "8.11"
+      },
+      {
+        "name": "PyPDF2",
+        "version": "3.0.0"
+      },
+      {
+        "name": "FastAPI",
+        "version": "0.104.0"
+      }
+    ]
+  }
+]
