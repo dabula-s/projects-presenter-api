@@ -80,7 +80,7 @@ def create_project(json: CreateProjectRequestSchema):
     with sync_session_manager() as session:
         project_repository = PostgresProjectRepository(session=session)
         service = CreateProjectService(project_repository=project_repository)
-        service_dto = from_dict_extended(CreateProjectDTO, json.model_dump(exclude_unset=True))
+        service_dto = from_dict_extended(CreateProjectDTO, json.model_dump(mode='json', exclude_unset=True))
         project = service.call(dto=service_dto)
 
     return jsonify(CreateProjectResponseSchema.model_validate(project).model_dump(mode='json')), 201
@@ -96,7 +96,8 @@ def update_project(project_id: int, json: UpdateProjectJsonSchema):
         project_repository = PostgresProjectRepository(session=session)
         service = UpdateProjectService(project_repository=project_repository)
         service_dto = from_dict_extended(UpdateProjectDTO,
-                                         {'project_id': project_id, **json.model_dump(mode='json', exclude_unset=True)})
+                                         {'project_id': project_id,
+                                          **json.model_dump(mode='json', exclude_unset=True)})
         project = service.call(dto=service_dto)
 
     return jsonify(UpdateProjectResponseSchema.model_validate(project).model_dump(mode='json')), 200

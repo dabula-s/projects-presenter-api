@@ -32,13 +32,13 @@ class AtLeastOneFieldRequiredMixin(BaseModel):
 
 class TechnologySchema(BaseSchema):
     id: int | None = None
-    name: str = Field(..., min_length=1, max_length=128)
+    name: str = Field(..., min_length=1, max_length=128, examples=['Flask', 'Python'])
     description: str | None = Field(None, min_length=1, max_length=255)
 
 
 class TechnologyVersionSchema(BaseSchema):
     id: int | None = None
-    version: str = Field(..., min_length=1, max_length=128)
+    version: str = Field(..., min_length=1, max_length=128, examples=['Enterprise', '3.12', '12.233.1'])
     technology: TechnologySchema
 
 
@@ -75,11 +75,17 @@ class GetManyProjectResponseSchema(BaseSchema):
 
 
 class CreateProjectRequestSchema(BaseSchema):
-    name: str = Field(..., min_length=1, max_length=128)
-    description: str | None = Field(None, min_length=1, max_length=255)
-    technologies: set[ProjectTechnologyVersionSchema] | None = None
-    start_date: datetime | None = None
-    end_date: datetime | None = None
+    name: str = Field(..., min_length=1, max_length=128, examples=['Project name'])
+    description: str | None = Field(None, min_length=1, max_length=255, examples=['Some description'])
+    technologies: set[ProjectTechnologyVersionSchema] | None = Field(None, examples=[
+        [
+            {"name": "Python", "version": "3.12"},
+            {"name": "Flask", "version": "3.0.0"},
+            {"name": "PostgreSQL", "version": "16.1"},
+        ],
+    ])
+    start_date: datetime | None = Field(None, examples=['2025-01-01T00:00:00'])
+    end_date: datetime | None = Field(None, examples=['2025-12-31T00:00:00'])
 
 
 class CreateProjectResponseSchema(ProjectSchema):
@@ -87,11 +93,17 @@ class CreateProjectResponseSchema(ProjectSchema):
 
 
 class UpdateProjectJsonSchema(BaseSchema, AtLeastOneFieldRequiredMixin):
-    name: str | None = Field(None, min_length=1, max_length=128)
-    description: str | None = Field(None, min_length=1, max_length=255)
-    technologies: set[ProjectTechnologyVersionSchema] | None = None
-    start_date: datetime | None = None
-    end_date: datetime | None = None
+    name: str = Field(..., min_length=1, max_length=128, examples=['Project new name'])
+    description: str | None = Field(None, min_length=1, max_length=255, examples=['Some new description'])
+    technologies: set[ProjectTechnologyVersionSchema] | None = Field(None, examples=[
+        [
+            {"name": "Python", "version": "3.12"},
+            {"name": "Flask", "version": "3.0.0"},
+            {"name": "PostgreSQL", "version": "16.1"},
+        ],
+    ])
+    start_date: datetime | None = Field(None, examples=['2025-01-01T00:00:00'])
+    end_date: datetime | None = Field(None, examples=['2025-12-31T00:00:00'])
 
     @field_validator('name')
     @classmethod
@@ -100,7 +112,6 @@ class UpdateProjectJsonSchema(BaseSchema, AtLeastOneFieldRequiredMixin):
             raise ValueError('Name cannot be empty!')
 
         return value
-
 
 
 class UpdateProjectResponseSchema(ProjectSchema):
