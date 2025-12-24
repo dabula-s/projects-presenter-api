@@ -96,5 +96,6 @@ make load-seed
 5. Go to [api docs link](http://localhost:8000/docs/swagger/).
 
 #### TODO:
- - Add tests
- - Add version validation
+ - Add tests.
+ - Add version validation.
+ - Make tech names case-insensitive.
